@@ -2,6 +2,7 @@ import 'package:templaterpone/bloc/splash_screen/splash_screen_bloc.dart';
 import 'package:templaterpone/utils/app_constants_utils.dart';
 import 'package:templaterpone/utils/asset_image_utils.dart';
 import 'package:templaterpone/utils/app_functions.dart';
+import 'package:templaterpone/utils/color_utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'landing_screen.dart';
@@ -15,6 +16,7 @@ class SplashScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => SplashScreenBloc()..add(StartSplash()),
       child: Scaffold(
+        backgroundColor: AppColors.primaryBgColor,
         body: BlocConsumer<SplashScreenBloc, SplashScreenState>(
           listener: (context, state) {
             navigateAfterSplash(context, state: state);
