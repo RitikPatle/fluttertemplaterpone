@@ -22,6 +22,7 @@ class TemplateRpOneApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor,
         ),
+        scaffoldBackgroundColor: AppColors.primaryBgColor,
         useMaterial3: true,
       ),
       home: const SplashScreen(),
